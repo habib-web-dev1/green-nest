@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  background-color: rgb(233, 233, 230);
+}
+.active {
+  @apply font-semibold text-base py-2 px-3 rounded-lg transition-all duration-200 ease-in-out bg-emerald-100 text-emerald-700 shadow-sm;
+}
