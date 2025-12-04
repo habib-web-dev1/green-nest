@@ -16,7 +16,7 @@ const Home = () => {
       ) : (
         <div>
           <Slider></Slider>
-          <TopRatedPlants></TopRatedPlants>
+          <TopRatedPlants />
           <PlantCareTips></PlantCareTips>
           <GreenExperts></GreenExperts>
           <FeaturedPlant></FeaturedPlant>

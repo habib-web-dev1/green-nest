@@ -9,6 +9,7 @@ import SignupPage from "../Pages/SignUpPage";
 import ProfilePage from "../Pages/ProfilePage";
 import PrivateRouter from "../Provider/PrivateRouter";
 import Spinner from "../Components/Spinner";
+import AddPlant from "../Pages/AddPlant";
 
 const router = createBrowserRouter([
   {
@@ -29,8 +30,20 @@ const router = createBrowserRouter([
         Component: AllPlants,
       },
       {
+        path: "/add-plant",
+        element: (
+          <PrivateRouter>
+            <AddPlant></AddPlant>
+          </PrivateRouter>
+        ),
+      },
+      {
         path: "/profile",
-        Component: ProfilePage,
+        element: (
+          <PrivateRouter>
+            <ProfilePage></ProfilePage>
+          </PrivateRouter>
+        ),
       },
       {
         path: "/plants/:id",

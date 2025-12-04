@@ -7,7 +7,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const Slider = () => {
   return (
-    <div className="w-11/12 h-[400px] mx-auto py-5">
+    <div className="w-11/12 min-h-[60vh] max-h-[70vh] mx-auto py-5">
       <Swiper
         navigation={true}
         pagination={{ clickable: true }}
@@ -16,7 +16,7 @@ const Slider = () => {
       >
         <SwiperSlide>
           <div
-            className="w-full h-[300px] md:h-[400px] bg-center bg-cover flex items-center justify-center"
+            className="w-full min-h-[60vh] max-h-[70vh] bg-center bg-cover flex items-center justify-center"
             style={{ backgroundImage: "url('./slider1.webp')" }}
           >
             <div className="bg-black/50 p-6 rounded-lg">
@@ -31,7 +31,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="w-full h-[300px] md:h-[400px] bg-center bg-cover flex items-center justify-center"
+            className="w-full min-h-[60vh] max-h-[70vh] bg-center bg-cover flex items-center justify-center"
             style={{ backgroundImage: "url('./slider2.webp')" }}
           >
             <div className="bg-black/50 p-6 rounded-lg">
@@ -46,7 +46,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="w-full h-[300px] md:h-[400px] bg-center bg-cover flex items-center justify-center"
+            className="w-full min-h-[60vh] max-h-[70vh] bg-center bg-cover flex items-center justify-center"
             style={{ backgroundImage: "url('./slider3.webp')" }}
           >
             <div className="bg-black/50 p-6 rounded-lg">
@@ -61,7 +61,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="w-full h-[300px] md:h-[400px] bg-center bg-cover flex items-center justify-center"
+            className="w-full min-h-[60vh] max-h-[70vh] bg-center bg-cover flex items-center justify-center"
             style={{ backgroundImage: "url('./slider4.jpg')" }}
           >
             <div className="bg-black/50 p-6 rounded-lg">

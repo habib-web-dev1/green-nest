@@ -25,8 +25,8 @@ const Rating = ({ rating }) => {
 };
 const PlantCard = ({ plant }) => {
   return (
-    <div>
-      <div className="bg-white rounded-xl shadow-lg">
+    <div className="h-full">
+      <div className="bg-white rounded-xl shadow-lg h-full flex flex-col transition-shadow duration-300 hover:shadow-xl">
         <div className="h-64 overflow-hidden">
           <img
             src={plant.image}
@@ -36,7 +36,7 @@ const PlantCard = ({ plant }) => {
         </div>
         <div className="p-6">
           <h3
-            className="text-xl font-semibold text-emerald-800 mb-2"
+            className="text-xl font-semibold text-emerald-800 mb-2 truncate"
             title={plant.plantName}
           >
             {plant.plantName}

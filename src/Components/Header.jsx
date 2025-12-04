@@ -12,9 +12,33 @@ const Header = () => {
         toast.success(error);
       });
   };
+  const publicRoutes = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/plants">All Plants</NavLink>
+      </li>
+    </>
+  );
+
+  const privateRoutes = (
+    <>
+      <li>
+        <NavLink to="/add-plant">Add Plant</NavLink>
+      </li>
+      <li>
+        <NavLink to="/my-plants">My Plants</NavLink>
+      </li>
+      <li>
+        <NavLink to="/profile">My Profile</NavLink>
+      </li>
+    </>
+  );
   return (
-    <nav>
-      <div className="navbar bg-base-100 shadow-sm">
+    <nav className="sticky top-0 z-50">
+      <div className="navbar bg-green-100 shadow-xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -25,28 +49,20 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/plants">Plants</NavLink>
-              </li>
-              <li>
-                <NavLink to="/profile">My Profile</NavLink>
-              </li>
+              {publicRoutes}
+              {user && privateRoutes}
             </ul>
           </div>
           <figure>
@@ -55,15 +71,8 @@ const Header = () => {
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1 font-semibold text-base py-1 space-x-2 rounded-lg transition-all duration-200 ease-in-out">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/plants">Plants</NavLink>
-            </li>
-            <li>
-              <NavLink to="/profile">My Profile</NavLink>
-            </li>
+            {publicRoutes}
+            {user && privateRoutes}
           </ul>
         </div>
         <div className="navbar-end dropdown dropdown-end space-x-4">

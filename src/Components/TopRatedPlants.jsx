@@ -6,7 +6,7 @@ import PlantCard from "./PlantCard";
 const TopRatedPlants = () => {
   const { plants } = usePlants();
   const sortedPlants = plants.sort((a, b) => b.rating - a.rating);
-  const topRated = sortedPlants.slice(0, 6);
+  const topRated = sortedPlants.slice(0, 8);
 
   return (
     <section className="py-16">
@@ -15,7 +15,7 @@ const TopRatedPlants = () => {
           Top Rated Indoor Plants
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pt-6">
           {topRated.map((plant) => (
             <PlantCard plant={plant} key={plant.plantId}></PlantCard>
           ))}
