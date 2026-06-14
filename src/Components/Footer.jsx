@@ -115,7 +115,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="pt-8 text-center text-emerald-200 text-base">
-        <p>&copy; 2025 Green Nest. All rights reserved.</p>
+        <p>&copy; 2026 Green Nest. All rights reserved.</p>
         <p className="mt-2 text-sm">Crafted with care for plant lovers.</p>
       </div>
     </footer>
